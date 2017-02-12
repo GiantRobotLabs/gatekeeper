@@ -65,7 +65,7 @@ function sendControl(req, res, next) {
   if (req.params.name == "quit") {
     res.send("Stopping server");
     next();
-    process.exit(1);
+    process.exit();
   }
   return next(new restify.NotImplementedError("Operation [" + req.params.name + "] is not supported."));
 };
