@@ -8,4 +8,4 @@ if [ "$HOST" = "" ]; then
   usage
 fi
 
-curl $1/controls/quit -X PUT
+curl -s $1/controls/quit -X PUT

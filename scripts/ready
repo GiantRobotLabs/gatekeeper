@@ -9,4 +9,4 @@ if [ "$SERVICE" = "" ]; then
   usage
 fi
 
-curl $1/services/$2/ready -X PUT
+curl -s $1/services/$2/ready -X PUT

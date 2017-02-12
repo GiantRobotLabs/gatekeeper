@@ -10,4 +10,4 @@ if [ "$SERVICE" = "" ]; then
   usage
 fi
 
-curl $1/services/$2 -X POST 
+curl -s $1/services/$2 -X POST 
