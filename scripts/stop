@@ -1,0 +1,11 @@
+#!/bin/bash
+
+usage() { echo "Usage: $0 <gatekeeper-host:port>"; exit 1; }
+
+HOST=$1
+
+if [ "$HOST" = "" ]; then
+  usage
+fi
+
+curl $1/controls/quit -X PUT

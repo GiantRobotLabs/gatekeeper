@@ -1,0 +1,26 @@
+#!/bin/bash
+
+usage() { echo "Usage: $0 <gatekeeper-host:port> <service>"; exit 1; }
+
+HOST=$1
+SERVICE=$2
+
+if [ "$SERVICE" = "" ]; then
+  usage
+fi
+
+status=`curl -s -o /dev/null -w "%{http_code}" $1/services/$2/status`
+
+if [ "$status" = "200" ]; then
+  echo "ready"
+fi
+
+if [ "$status" = "503" ]; then
+  echo "not ready"
+fi
+
+if [ "$status" = "404" ]; then
+  echo "status not available"
+fi
+
+exit 0

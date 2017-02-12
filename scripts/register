@@ -1,0 +1,13 @@
+#!/bin/bash
+
+usage() { echo "Usage: $0 <gatekeeper-host:port> <service>"; exit 1; }
+
+HOST=$1
+SERVICE=$2
+
+if [ "$SERVICE" = "" ]; then
+  echo "$0 requires two arguments.\n"
+  usage
+fi
+
+curl $1/services/$2 -X POST 
