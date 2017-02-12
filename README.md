@@ -43,12 +43,13 @@ Sometimes you just need to slow things down. The intent of this container is to 
 # Instructions
 Gatekeeper is a small docker container you can start up in your compose infrastructure to register and indicate ready status for other containers. The container is a small nodejs Restify server. The source contains some scripts that can be used as examples to manage server status.
 
+## Basic operation
 1. Include jneyer/gatekeeper in your Docker compose.yml
 2. Register your service for status.
 3. Wait for a change in status in your dependent container.
 4. Register ready state when the service is ready.
 
-Scripts:
+## Scripts:
 * **register** - register a service for status.
 * **ckready** - check the service status on the gatekeeper.
 * **ready** - send the ready status for the service.
