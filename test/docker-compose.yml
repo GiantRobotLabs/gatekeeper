@@ -1,0 +1,29 @@
+version: '2'
+services:
+ 
+  gk:
+     image: test/gk
+     build: ../.
+     container_name: gatekeeper
+     expose:
+      - "8080"
+
+  km:
+     image: test/km
+     build: km/.
+     container_name: keymaster
+     volumes:
+      - ../scripts:/test/scripts
+     depends_on:
+      - "gk"
+    
+  zl:
+     image: test/zl
+     build: zl/.
+     container_name: zuul
+     volumes:
+      - ../scripts:/test/scripts
+     depends_on:
+      - "gk"
+      - "km"
+
