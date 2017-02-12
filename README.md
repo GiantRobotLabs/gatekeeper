@@ -49,10 +49,10 @@ Gatekeeper is a small docker container you can start up in your compose infrastr
 4. Register ready state when the service is ready.
 
 Scripts:
-* register - register a service for status.
-* ckready - check the service status on the gatekeeper.
-* ready - send the ready status for the service.
-* stop - send a remote control signal to stop the gatekeeper.
+* **register** - register a service for status.
+* **ckready** - check the service status on the gatekeeper.
+* **ready** - send the ready status for the service.
+* **stop** - send a remote control signal to stop the gatekeeper.
 
 If you don't need gatekeeper to continue running, you can send it a stop signal to shut it down.
 
