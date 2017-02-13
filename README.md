@@ -1,7 +1,7 @@
 # docker-gatekeeper
 A container for a docker-compose environment to help orchestrate startup.
 
-`docker run -p 8080:8080  --rm jneyer/gatekeeper`
+`docker run -p 8080:8080  --rm giantrobotlabs/gatekeeper`
 
 ```
 {
