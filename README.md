@@ -49,7 +49,7 @@ Gatekeeper is a small docker container you can start up in your compose infrastr
 3. Wait for a change in status in your dependent container.
 4. Register ready state when the service is ready.
 
-## Scripts:
+## Scripts (using curl):
 * **register** - register a service for status.
 * **ckready** - check the service status on the gatekeeper.
 * **ready** - send the ready status for the service.
@@ -57,4 +57,4 @@ Gatekeeper is a small docker container you can start up in your compose infrastr
 
 If you don't need gatekeeper to continue running, you can send it a stop signal to shut it down.
 
-**For security purposes, this container is intended for local network access only.**
+**For security reasons, this container is intended for local network access only.**
