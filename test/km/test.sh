@@ -29,7 +29,7 @@ register
 echo "$myname prepares."
 sleep 15
 
-echo "$myname ready."
+echo "$myname meets gatekeeper."
 ready
 
 while [ "$(check)" != "ready" ]; do
