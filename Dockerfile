@@ -2,6 +2,6 @@ FROM node:alpine
 COPY gk.js /gatekeeper/gk.js
 RUN npm install restify
 WORKDIR /gatekeeper
-EXPOSE 3000
+EXPOSE 8080
 ENTRYPOINT ["node", "gk.js"]
 
